@@ -1,3 +1,7 @@
+
+// PRACTICA 13
+
+
 /* Fuente: verfich1.c
    Programa: LEER FICHERO DE TEXTO MEDIANTE fgetc
    Descripci�n: Presenta en pantalla un fichero texto, leyendo car�cter 
@@ -10,7 +14,7 @@
 #include <stdlib.h>
 
 int main (void) {
-     FILE *fp;
+     FILE *fp; // file es una estructura, definida en stdio.h (con ifdef def typedef)
     const char nombre_fichero[] = "dato.txt";
     // char c; /* Variable car�cter para lectura del fichero */
      

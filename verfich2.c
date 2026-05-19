@@ -1,9 +1,11 @@
+// PRACTICA 2
+
 /* Fuente: VERFICH2.C
    Programa: LEER FICHERO DE TEXTO MEDIANTE fgetc Y feof
-   Descripción: Presenta en pantalla un fichero texto, leyendo carácter 
-   a carácter mediante getc, y presentando el carácter leído en pantalla
+   Descripciï¿½n: Presenta en pantalla un fichero texto, leyendo carï¿½cter 
+   a carï¿½cter mediante getc, y presentando el carï¿½cter leï¿½do en pantalla
    mediante putchar.
-   Utiliza, combinada con fgetc, la función feof.
+   Utiliza, combinada con fgetc, la funciï¿½n feof.
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,7 +13,7 @@
 int main (void) {
      FILE *fp;
      char nombre_fichero[] = "c:\\temp\\frases.txt";
-     char c; /* Variable carácter para lectura del fichero */
+     char c; /* Variable carï¿½cter para lectura del fichero */
      
      system ("cls");
 
@@ -26,6 +28,7 @@ int main (void) {
      printf ("========================================\n");
 
      c = fgetc(fp);
+
 	 while ( !feof(fp) )
        { putchar(c);
          c = fgetc(fp);
@@ -38,5 +41,32 @@ int main (void) {
      printf("\n\n");
      system ("pause");
      return 0;
+}
+// practica 2
+lectura(fp);
+while ( !feof(fp)) {
+
+  //Tratamiento de los datos leidos
+
+  lectura(fp);
+}
+
+// LECTURA(FP) PUEDE SER:
+// int fgetc(FILE *fp);
+// char *fgets (char *cadena, int n, FILE *fp);
+// int fscanf(FILE *fp, const char *formato, arg1, .... ,)
+
+// ej bucle que lee caracter a caracter un fichero de texto, cuenta el numeroo de letras matusculas que encuentra
+
+int cuantos = 0;
+char c;
+
+c = fget(fp);
+while ( !feof(fp)) {
+
+  if ((c >= 'A' && c <= 'Z') || c == 'Ã‘')
+  cuantos ++;
+
+  c = fgetc(fp);
 }
 
