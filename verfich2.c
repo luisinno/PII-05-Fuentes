@@ -42,6 +42,16 @@ int main (void) {
      system ("pause");
      return 0;
 }
+
+
+
+
+
+
+
+//;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 // practica 2
 lectura(fp);
 while ( !feof(fp)) {
