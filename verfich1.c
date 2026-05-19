@@ -1,32 +1,34 @@
 /* Fuente: verfich1.c
    Programa: LEER FICHERO DE TEXTO MEDIANTE fgetc
-   Descripción: Presenta en pantalla un fichero texto, leyendo carácter 
-   a carácter mediante getc, y presentando el carácter leído en pantalla
+   Descripciï¿½n: Presenta en pantalla un fichero texto, leyendo carï¿½cter 
+   a carï¿½cter mediante getc, y presentando el carï¿½cter leï¿½do en pantalla
    mediante putchar.
 */
+
+// APERTURA Y CIERRE
 #include <stdio.h>
 #include <stdlib.h>
 
 int main (void) {
      FILE *fp;
-     char nombre_fichero[] = "c:\\temp\\frases.txt";
-     char c; /* Variable carácter para lectura del fichero */
+    const char nombre_fichero[] = "dato.txt";
+    // char c; /* Variable carï¿½cter para lectura del fichero */
      
-     system ("cls");
+     // system ("cls");
 
-     if ( (fp=fopen(nombre_fichero, "r")) == NULL )
+     if ( (fp=fopen(nombre_fichero, "r")) == NULL ) //si, tratamiento de error
  	 { printf("ERROR. NO se puede abrir el fichero %s\n", nombre_fichero);
        printf ("\n");
        system ("pause");
        return 1;
 	 }
 	 
-     printf ("CONTENIDO DEL FICHERO %s\n", nombre_fichero);
-     printf ("========================================\n");
+   //  printf ("CONTENIDO DEL FICHERO %s\n", nombre_fichero);
+   //  printf ("========================================\n");
 
-     while ( (c = fgetc(fp)) != EOF )
-  	     putchar(c);
-
+    // while ( (c = fgetc(fp)) != EOF )
+  	  //   putchar(c);
+// cierre del fichero, antes de terminar el programa
      fclose(fp);
 
      printf ("\n========================================\n");
